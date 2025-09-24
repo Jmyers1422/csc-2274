@@ -1,18 +1,27 @@
-html{
-    ;
-}
-
 nav ul{
     display: flex;
     list-style: none;
-    text-align: center;
     justify-content: center; 
-    border: 2px solid black;
-    background-color: #34788A
+    border: 1px solid black;
+    background-color: #34788A;
 }
 nav li{
     padding: 10px;
     text-align: center;
     border: 1px solid black;
-
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #E8F1F2;
+}
+h2 {
+    font-size: 20px;
+}
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 20px;
+}
+ul {
+    list-style: decimal;
 }
