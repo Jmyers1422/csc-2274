@@ -1,0 +1,37 @@
+<doctype html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>All About Germany</title>
+            <link rel="stylesheet" href="styles.css">
+            <meta description="page description here">
+        </head>
+
+        <body>
+            <div id="header"></div>
+
+            <main>
+                <h1>Traveling Tips</h1>
+                <p>
+                    There are loads of differences between the US and Germany. Here are some tips you should keep in mind if you plan on traveling to Germany.
+                </p>
+                <ul>
+                    <li>Public transportation is widely used in Germany so make sure you look for train and bus tickets.</li>
+                    <li>As odd as it may seem, many public bathrooms require payment of some kind. The bathrooms that will ask for paymeny will usually be behing a turnstyle. Some also have someone posted outside asking for tips, these are optional.</li>
+                    <li>Many places in germany don't accept card, so you should plan to use cash as the primary form of currency.</li>
+                    <li>Germany runs on a different electrical system and you will need a step-down converter for your plugs. Be careful to check that your converter is capable of changing the elecrical frequency</li>
+                </ul>
+            </main>
+            <div id="footer"></div>
+
+        <script>
+            async function loadHTML(id, file){
+                const el = document.getElementById(id);
+                const resp = await fetch(file);
+                el.innerHTML = await resp.text();
+            }
+            loadHTML("header", "header.html");
+            loadHTML("footer", "footer.html");
+        </script>
+
+        </body>

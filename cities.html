@@ -1,0 +1,84 @@
+<doctype html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>All About Germany</title>
+            <link rel="stylesheet" href="styles.css">
+            <meta description="page description here">
+        </head>
+
+        <body>
+            <div id="header"></div>
+
+            <main>
+                <h1>Cities and their History</h1>
+                <p>
+                    Germany has many beautiful cities with plenty of history. Here are some places that you may want to visit in them.
+                </p>
+                <p>
+                    Berlin
+                </p>
+                <ul>
+                     <li>1. Brandenburg Gate</li>
+                     <li>2. Berlin Wall Memorial</li>
+                     <li>3. Museum Island</li>
+                     <li>4. Reichstag Building</li>
+                     <li>5. tv tower</li>
+                </ul>
+                <p>
+                    Munich
+                </p>
+                <ul>
+                     <li>1. Hofbräuhaus</li>
+                     <li>2. Marienplatz</li>
+                     <li>3. Nymphenburg Palace</li>
+                     <li>4. English Garden</li>
+                     <li>5. Deutsches Museum</li>
+
+                </ul>
+                <p>
+                    Hamburg 
+                </p>
+                <ul>
+                     <li>1. Miniatur Wunderland</li>
+                     <li>2. Elbphilharmonie</li>
+                     <li>3. Speicherstadt</li>
+                     <li>4. St. Michael's Church</li>
+                     <li>5. Planten un Blomen</li>
+                </ul>
+                <p>
+                    Cologne
+                </p>
+                <ul> 
+                     <li>1. Cologne Cathedral</li>
+                     <li>2. Hohenzollern Bridge</li>
+                     <li>3. Museum Ludwig</li>
+                     <li>4. Old Town (Altstadt)</li>
+                     <li>5. Rhine River Cruises</li>
+                </ul>
+                <p>
+                    Frankfurt
+                </p>
+                <ul>
+                     <li>1. Römer</li>
+                     <li>2. Palmengarten</li>
+                     <li>3. Städel Museum</li>
+                     <li>4. Main Tower</li>
+                     <li>5. Goethe House</li>
+                </ul>
+                
+                
+            </main>
+            <div id="footer"></div>
+
+        <script>
+            async function loadHTML(id, file){
+                const el = document.getElementById(id);
+                const resp = await fetch(file);
+                el.innerHTML = await resp.text();
+            }
+            loadHTML("header", "header.html");
+            loadHTML("footer", "footer.html");
+        </script>
+
+        </body>
