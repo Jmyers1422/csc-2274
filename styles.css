@@ -4,11 +4,11 @@ nav ul{
     display: flex;
     list-style: none;
     justify-content: center; 
+    max-height:50px;
     border: 1px solid black;
     background-color: #34788A;      
 }
 
-/*navigation bar*/
 nav li{
     padding: 10px;
     border: 1px solid black; 
@@ -31,7 +31,6 @@ nav li{
     max-height: 100%;
     min-height: 100%;
     object-position: center;
-
     object-fit: cover;
 }
 
@@ -45,7 +44,6 @@ nav li{
     justify-content: center;
     display: block;
     margin: 0 auto; 
-
 }
 
 /*Banner Title*/
@@ -59,7 +57,6 @@ nav li{
     top: 10%;
     z-index: 1;
 }
-
 
 .title h1 {
     font-size: 40px;
@@ -75,6 +72,12 @@ body {
     font-family: Arial, sans-serif;
     background-color: white;
 }
+main {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 h2 {
     font-size: 20px;
@@ -88,4 +91,66 @@ p {
 
 ul {
     list-style: decimal;
+}
+
+/* Grid containers*/
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 20px;
+    
+}
+
+.grid >div {
+    background-color: rgb(120, 154, 167);
+    border: 2px solid black;
+    height: 200px;
+    width: 1200px; 
+    padding: 0px;
+    font-size: 30px;
+    margin-bottom: 10px;
+    
+}
+
+.card {
+    position:relative;
+    width: 100%;
+    height: 100%;
+    max-width: 80%;
+    display: grid;
+    grid-template-columns: 350px 1fr .2fr; /*col1 keeps image small*/
+    padding: 0px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card >.content >h4 {
+    position: relative;
+    padding: 0px;
+    margin:0;
+    margin-left: 50%; /*centers the left side of h4*/
+    transform: translatex(-50%); /*relocate to element center*/
+    top: 10px;
+}
+
+.card >.image {
+    display: flex;
+    overflow: auto; /* stops image from leaving container*/
+}
+
+.card >.image >img {
+    min-width:100%;
+    min-height:100%;
+    max-width: 100%; /*gets rid of scroll bar*/
+    padding: 0px;
+}
+
+.card >.button {
+    display:flex;
+    align-items: center;
+}
+
+.card >.button >button {
+    height: 30px;
+    margin:0px;
 }

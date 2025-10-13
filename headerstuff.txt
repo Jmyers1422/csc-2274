@@ -1,0 +1,13 @@
+<nav>
+<ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="cities.html">Cities</a></li>
+    <li><a href="foods.html">Foods</a></li>
+    <li><a href="travel.html">Traveling</a></li>
+    <li><a href="immigration.html">Immigration</a></li>
+    <li><a href="language.html">Language</li>
+    <li><a href="about.html">About me</li>
+    <li><a href="contact.html">Contact me</a></li>
+    <li><a href="example.html">Example</a></li>
+</ul>
+</nav>

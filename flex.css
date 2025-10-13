@@ -1,0 +1,109 @@
+/*Site-wide Variables*/
+:root {
+    --menu-bg: #a35260;
+    --menu-bg-sub:;
+    --menu-hover: #fff6;
+    --menu-focus: #f726;
+
+    --primary-color:;
+    --secondary-color:;
+    --tertiary-color:;
+    --accent-color:;
+}
+
+ul {
+    list-style:none;
+    
+}
+
+a {
+    text-decoration: none;   
+}
+
+.site-header {
+    background-color: var(--menu-bg);
+}
+
+.menu-sub {
+    display:none !important;
+}
+.main-nav a{
+    white-space: nowrap;
+}
+
+.main-nav a:hover {
+    background: var(--menu-hover);
+}
+
+.main-nav a:focus {
+    background: var(--menu-focus);
+}
+
+
+
+
+
+
+
+
+
+img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+body {
+    width: 80%;
+}
+main {
+    width:750px;
+    border: 2px solid black;
+    margin: auto;
+    padding: 30px;
+    justify-content: center;
+}
+.flex-demo {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    gap: 10px
+}
+.flex-demo >div {
+    background-color: green;
+    border: 2px solid black;
+    padding: 20px;
+    font-size: 30px;
+    flex: 1;
+}
+
+.grid-demo {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.grid-demo >div {
+    background-color: lightgreen;
+    border: 2px solid black;
+}
+.card {
+    display: flex;
+    flex-flow: column;
+    padding: 25px;
+}
+.card >img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    padding: 10px;
+}
+.card >button {
+    background-color: lightblue;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+

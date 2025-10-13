@@ -1,0 +1,106 @@
+<doctype html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <title>All About Germany</title>
+            <link rel="stylesheet" href="flex.css">
+            <meta description="page description here">
+        </head>
+
+        <body>
+            <div id="header"></div>
+                <div class="title">
+                <h1>All About Germany</h1>
+                <p>subtitle here</p>
+                </div>
+                <img src="images/castle.webp">
+            </div>
+
+
+            <main>
+            <h1> Flex and grid demo</h1>
+            <h2>Flexbox example</h2>
+
+            <section class="flex-demo">
+
+                <div class="card">
+                    <img src="images/immigration_office.webp">
+                    <h4>Title</h4>
+                    <p>Content</p>
+                    <button>More info</button>
+                </div>
+                <div class="card">
+                    <img src="images/immigration_office.webp">
+                    <h4>Title</h4>
+                    <p>Content</p>
+                    <button>More info</button>
+                </div>
+                <div class="card">
+                    <img src="images/immigration_office.webp">
+                    <h4>Title</h4>
+                    <p>Content</p>
+                    <button>More info</button>
+                </div>
+                <div class="card">
+                    <img src="images/immigration_office.webp">
+                    <h4>Title</h4>
+                    <p>Content</p>
+                    <button>More info</button>
+                </div>
+                <div class="card">
+                    <img src="images/immigration_office.webp">
+                    <h4>Title</h4>
+                    <p>Content</p>
+                    <button>More info</button>
+                </div>
+
+            </section>
+
+            <h2>Grid example</h2>
+            <section class="grid-demo">
+                <div class="card">
+                    <img src="images/immigration_office.webp">
+                    <h4>Title</h4>
+                    <p>Content</p>
+                    <button>More info</button>
+                </div>
+                <div class="card">
+                    <img src="images/immigration_office.webp">
+                    <h4>Title</h4>
+                    <p>Content</p>
+                    <button>More info</button>
+                </div>
+                <div class="card">
+                    <img src="images/immigration_office.webp">
+                    <h4>Title</h4>
+                    <p>Content</p>
+                    <button>More info</button>
+                </div>
+                    <div class="card">
+                    <img src="images/immigration_office.webp">
+                    <h4>Title</h4>
+                    <p>Content</p>
+                    <button>More info</button>
+                </div>
+                <div class="card">
+                    <img src="images/immigration_office.webp">
+                    <h4>Title</h4>
+                    <p>Content</p>
+                    <button>More info</button>
+                </div>
+            </section>
+                
+            </main>
+            <div id="footer"></div>
+
+        <script>
+            async function loadHTML(id, file){
+                const el = document.getElementById(id);
+                const resp = await fetch(file);
+                el.innerHTML = await resp.text();
+            }
+            loadHTML("header", "header.html");
+            loadHTML("footer", "footer.html");
+        </script>
+
+        </body>
