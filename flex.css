@@ -1,109 +1,225 @@
-/*Site-wide Variables*/
+
+
+/*Variables*/
+
+
 :root {
-    --menu-bg: #a35260;
-    --menu-bg-sub:;
-    --menu-hover: #fff6;
-    --menu-focus: #f726;
-
-    --primary-color:;
-    --secondary-color:;
-    --tertiary-color:;
-    --accent-color:;
-}
-
-ul {
-    list-style:none;
+    --spaceholder:a;
+    --highlight-color: #1e3e47;
+    --test-color: red;
+    --test-color2: blue;
+    --menu-radius:8px;
     
+    
+    /*colors*/
+    --menu-bg: #34788A;
+    --menu-color: #a35260;
+    --menu-hover: #1e3e47;
+    --text-color-primary: black;
+    --border: 1px solid black;
 }
 
-a {
-    text-decoration: none;   
-}
 
-.site-header {
+/*navigation bar*/
+
+
+nav ul{
+    display: flex;
+    list-style-type: none;
     background-color: var(--menu-bg);
 }
 
+nav li{
+    text-align: center;
+}
+
+nav a {
+    display: block;
+    padding: 15px;
+    color: var(--text-color-primary);
+    text-decoration: none;
+    height: 100%;
+}
+
+.main-nav > .menu-top > .brand {
+    padding:0;
+    margin: auto;
+    margin-left:0;
+}
+
+.menu-top {
+    padding: 0;
+    margin: 0; 
+}
+
+.dropdown {
+    position: relative;
+}
+
 .menu-sub {
-    display:none !important;
+    display: none; 
+    position: absolute;
+    top: 100%;
+    z-index: 10;  
+    border-radius: var(--menu-radius);
+    border: var(--border);
+    padding: 0;
+    margin: 0; 
+} 
+
+.main-nav a:hover, .main-nav a:focus {
+    background-color: var(--menu-hover);
 }
-.main-nav a{
-    white-space: nowrap;
-}
 
-.main-nav a:hover {
-    background: var(--menu-hover);
-}
-
-.main-nav a:focus {
-    background: var(--menu-focus);
+.dropdown:hover > .menu-sub, .dropdown:focus-within > .menu-sub {
+    display: block;
 }
 
 
+/* Hero banner with background image*/
 
 
-
-
-
-
-
-img {
-    width: 100px;
-    height: 100px;
+.hero {
+    height: 80%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    min-width: 100%;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+}
+.hero img{
+    width: 100%;
+    max-height: 100%;
+    min-height: 100%;
+    object-position: center;
     object-fit: cover;
 }
+
+/*Image on the language page*/
+.hero img.langimg {
+    width: 80%;
+    max-height: 100%;
+    object-position: center;
+    object-fit: cover;
+    align-items: center;
+    justify-content: center;
+    display: block;
+    margin: 0 auto; 
+}
+
+/*Banner Title*/
+.hero .title {
+    width: 100%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: var(--text-color-primary);
+    text-align: center;
+    padding: 0px;
+    top: 10%;
+    z-index: 1;
+}
+
+.title h1 {
+    font-size: 40px;
+    margin: 0px;
+}
+
+.title p {
+    margin: 0px;
+}
+
+
+/*Main page content*/
+
 
 body {
-    width: 80%;
+    margin:0px;
+    font-family: Arial, sans-serif;
+    background-color: white;
 }
 main {
-    width:750px;
-    border: 2px solid black;
-    margin: auto;
-    padding: 30px;
+    clear: left;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
-.flex-demo {
-    display: flex;
-    flex-flow: row;
-    flex-wrap: wrap;
-    gap: 10px
-}
-.flex-demo >div {
-    background-color: green;
-    border: 2px solid black;
-    padding: 20px;
-    font-size: 30px;
-    flex: 1;
-}
 
-.grid-demo {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.grid-demo >div {
-    background-color: lightgreen;
-    border: 2px solid black;
-}
-.card {
-    display: flex;
-    flex-flow: column;
-    padding: 25px;
-}
-.card >img {
-    width: 50%;
-    height: auto;
-    object-fit: cover;
-    padding: 10px;
-}
-.card >button {
-    background-color: lightblue;
+h2 {
     font-size: 20px;
-    cursor: pointer;
-    margin-bottom: 10px;
-    margin-top: 10px;
 }
 
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 20px;
+}
+
+ul {
+    list-style: decimal;
+}
+
+/* Grid containers*/
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 20px;
+    
+}
+
+.grid >div {
+    background-color: rgb(120, 154, 167);
+    border: 2px solid black;
+    height: 200px;
+    width: 1200px; 
+    padding: 0px;
+    font-size: 30px;
+    margin-bottom: 10px;
+    
+}
+
+.card {
+    position:relative;
+    width: 100%;
+    height: 100%;
+    max-width: 80%;
+    display: grid;
+    grid-template-columns: 350px 1fr .2fr; /*col1 keeps image small*/
+    padding: 0px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card >.content >h4 {
+    position: relative;
+    padding: 0px;
+    margin:0;
+    margin-left: 50%; /*centers the left side of h4*/
+    transform: translatex(-50%); /*relocate to element center*/
+    top: 10px;
+}
+
+.card >.image {
+    display: flex;
+    overflow: auto; /* stops image from leaving container*/
+}
+
+.card >.image >img {
+    min-width:100%;
+    min-height:100%;
+    max-width: 100%; /*gets rid of scroll bar*/
+    padding: 0px;
+}
+
+.card >.button {
+    display:flex;
+    align-items: center;
+}
+
+.card >.button >button {
+    height: 30px;
+    margin:0px;
+}
