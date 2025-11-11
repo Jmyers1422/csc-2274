@@ -3,7 +3,7 @@
         <head>
             <meta charset="UTF-8">
             <title>All About Germany</title>
-            <link rel="stylesheet" href="styles.css">
+            <link rel="stylesheet" href="flex.css">
             <meta description="German">
         </head>
 
@@ -27,20 +27,32 @@
                     Are you interested in learning about or traveling to Germany? On this website you will find a collection of common information that could be useful to a traveler. 
                 </p>
                 <p></p>
+
+            <!-- contact form -->
+                <form action="https://formspree.io/f/mzzjnbyj" method="POST">
+
+                    <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" name="name">
                     
+                    <label for="last-name">Last Name</label>
+                        <input type="text" id="first-name" name="name">
+
+                    <label for="email">Email (Required)</label>
+                        <input type="text" id="email" name="email" required>
+                    
+                    <label for="phone-number">Phone Number</label>
+                        <input type="text" id="phone-number" name="phone-number">
+
+                    <label for="message">Message (Required)</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit">Submit</button>
+
+                </form>
             </main>
 
             <!--common footer-->
             <div id="footer"></div>
 
-        <script>
-            async function loadHTML(id, file){
-                const el = document.getElementById(id);
-                const resp = await fetch(file);
-                el.innerHTML = await resp.text();
-            }
-            loadHTML("header", "header.html");
-            loadHTML("footer", "footer.html");
-        </script>
 
         </body>

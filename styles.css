@@ -1,6 +1,6 @@
 
 
-/*Variables*/
+/*====================== Variables ======================*/
 
 
 :root {
@@ -16,11 +16,19 @@
     --menu-color: #a35260;
     --menu-hover: #1e3e47;
     --text-color-primary: black;
+    --text-color-menu: white;
     --border: 1px solid black;
+    --button-color: rgb(200 200 200);
+    
+
+    /*fonts*/
+    --font-menu:'Franklin Gothic Medium';
+    --font-primary: ;
+    --font-secondary:
 }
 
 
-/*navigation bar*/
+/*====================== navigation bar ======================*/
 
 
 nav ul{
@@ -31,14 +39,16 @@ nav ul{
 
 nav li{
     text-align: center;
+    height: 25px;
+    
 }
 
 nav a {
     display: block;
     padding: 15px;
-    color: var(--text-color-primary);
+    color: var(--text-color-menu);
     text-decoration: none;
-    height: 100%;
+    height: 25px;
 }
 
 .main-nav > .menu-top > .brand {
@@ -54,18 +64,32 @@ nav a {
 
 .dropdown {
     position: relative;
+    width: 88px;
 }
 
 .menu-sub {
     display: none; 
-    position: absolute;
-    top: 100%;
-    z-index: 10;  
-    border-radius: var(--menu-radius);
-    border: var(--border);
+    position: relative;
+    transform: translatex(-50%);
+    height: 260px;
+    width: 115px;
     padding: 0;
     margin: 0; 
+    margin-left: 50%;
+    margin-bottom: 10px;
+    border-radius: var(--menu-radius);
+    border: var(--border);
+    z-index: 10;  
 } 
+
+.menu-sub li {
+    margin-bottom: 25px;   
+}
+
+.menu-sub li a {
+    transform: translatey(5px);
+    height: 20px;
+}
 
 .main-nav a:hover, .main-nav a:focus {
     background-color: var(--menu-hover);
@@ -76,7 +100,7 @@ nav a {
 }
 
 
-/* Hero banner with background image*/
+/*====================== Hero banner with background image ======================*/
 
 
 .hero {
@@ -98,14 +122,8 @@ nav a {
     object-fit: cover;
 }
 
-/*Image on the language page*/
 .hero img.langimg {
     width: 80%;
-    max-height: 100%;
-    object-position: center;
-    object-fit: cover;
-    align-items: center;
-    justify-content: center;
     display: block;
     margin: 0 auto; 
 }
@@ -114,11 +132,13 @@ nav a {
 .hero .title {
     width: 100%;
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.3);
-    color: var(--text-color-primary);
+    background-color: var(--menu-bg);
+    color: var(--text-color-menu);
+    border-top: var(--border);
+    border-bottom: var(--border);
     text-align: center;
     padding: 0px;
-    top: 10%;
+    top: 0%;
     z-index: 1;
 }
 
@@ -132,7 +152,7 @@ nav a {
 }
 
 
-/*Main page content*/
+/*====================== Main page content ======================*/
 
 
 body {
@@ -162,23 +182,25 @@ ul {
     list-style: decimal;
 }
 
-/* Grid containers*/
+
+/*====================== Cards ======================*/
+
+
 .grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     margin: 20px;
     
 }
 
 .grid >div {
-    background-color: rgb(120, 154, 167);
-    border: 2px solid black;
-    height: 200px;
-    width: 1200px; 
+    background-color: var(--menu-bg);
+    border: var(--border);
+    height: 500px;
+    width: 400px; 
     padding: 0px;
     font-size: 30px;
-    margin-bottom: 10px;
-    
+    margin-bottom: 80px;
 }
 
 .card {
@@ -187,18 +209,15 @@ ul {
     height: 100%;
     max-width: 80%;
     display: grid;
-    grid-template-columns: 350px 1fr .2fr; /*col1 keeps image small*/
+   /* grid-template-columns: 350px 1fr .2fr; col1 keeps image small*/
     padding: 0px; 
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 20px;
 }
 
 .card >.content >h4 {
     position: relative;
-    padding: 0px;
-    margin:0;
-    margin-left: 50%; /*centers the left side of h4*/
-    transform: translatex(-50%); /*relocate to element center*/
     top: 10px;
 }
 
@@ -222,4 +241,122 @@ ul {
 .card >.button >button {
     height: 30px;
     margin:0px;
+}
+
+
+/*====================== Contact Form ======================*/
+
+
+form {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 600px;
+    margin: 20px;
+    padding: 10px;
+    border: var(--border);
+    border-radius: var(--menu-radius);
+    background-color: #d4cf8596;
+}
+
+label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+input {
+    height: 35px;
+    border: var(--border);
+    font-size: 18px;
+    width: 400px;
+}
+
+fieldset {
+    border:var(--border);
+    margin-top: 15px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset p {
+    margin:5px;
+    margin-left:0;
+    padding:0;
+    font-size: medium;
+}
+
+fieldset div {
+    display: inherit;
+    flex-direction: row;
+    align-items: center;
+}
+
+fieldset label {
+    margin-right: 10px;
+    padding:0;
+}
+fieldset .phone-label {
+    margin-left: 50px;
+}
+
+fieldset input {
+    border: var(--border);
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    padding:0;
+}
+
+div.find {
+    border: var(--border);
+    width: 250px;
+    margin-top: 15px;
+    padding:15px
+}
+
+select {
+    width: 150px;
+    margin-top: 5px;
+}
+
+textarea {
+    height: 200px;
+    border: var(--border);
+    font-size: 18px;
+}
+
+form >button {
+    margin-top: 10px;
+    height: 35px;
+    width: 80px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(200 200 200);
+}
+
+fieldset input:hover {
+    background-color: var(--button-color);
+}
+
+
+/*====================== Footer styles ======================*/
+
+
+footer { 
+    border: var(--border);
+    height: 50px;
+    width: 100%;
+    position: relative;
+    background-color: var(--menu-bg);
+    bottom:0%;
+}
+
+footer p {
+    display: flex;
+    color: var(--text-color-menu);
+    font-family: var(--font-menu);
+    justify-content: center;
 }

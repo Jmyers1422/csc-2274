@@ -4,6 +4,7 @@
             <meta charset="UTF-8">
             <title>All About Germany</title>
             <link rel="stylesheet" href="styles.css">
+            <script src="scripts.js" defer></script>
             <meta description="page description here">
         </head>
 
@@ -22,70 +23,82 @@
                 <p>
                     Germany has many beautiful cities with plenty of history. Here are some places that you may want to visit in them.
                 </p>
-                <h2>
-                    Berlin
-                </h2>
-                <ul>
-                     <li>Brandenburg Gate</li>
-                     <li>Berlin Wall Memorial</li>
-                     <li>Museum Island</li>
-                     <li>Reichstag Building</li>
-                     <li>tv tower</li>
-                </ul>
-                <h2>
-                    Munich
-                </h2>
-                <ul>
-                     <li>Hofbräuhaus</li>
-                     <li>Marienplatz</li>
-                     <li>Nymphenburg Palace</li>
-                     <li>English Garden</li>
-                     <li>Deutsches Museum</li>
 
-                </ul>
-                <h2>
-                    Hamburg 
-                </h2>
-                <ul>
-                     <li>Miniatur Wunderland</li>
-                     <li>Elbphilharmonie</li>
-                     <li>Speicherstadt</li>
-                     <li>St. Michael's Church</li>
-                     <li>Planten un Blomen</li>
-                </ul>
-                <h2>
-                    Cologne
-                </h2>
-                <ul> 
-                     <li>Cologne Cathedral</li>
-                     <li>Hohenzollern Bridge</li>
-                     <li>Museum Ludwig</li>
-                     <li>Old Town (Altstadt)</li>
-                     <li>Rhine River Cruises</li>
-                </ul>
-                <h2>
-                    Frankfurt
-                </h2>
-                <ul>
-                     <li>Römer</li>
-                     <li>Palmengarten</li>
-                     <li>Städel Museum</li>
-                     <li>Main Tower</li>
-                     <li>Goethe House</li>
-                </ul>
-                
+                <section class="grid">
+                <!-- Imbed a map of each location inside each card-->
+                    <div class="card">
+                        <h2>
+                            Berlin
+                        </h2>
+                        <ul>
+                            <li>Brandenburg Gate</li>
+                            <li>Berlin Wall Memorial</li>
+                            <li>Museum Island</li>
+                            <li>Reichstag Building</li>
+                            <li>tv tower</li>
+                        </ul>
+                    </div>
+
+
+                    <div class="card">
+                        <h2>
+                            Munich
+                        </h2>
+                        <ul>
+                            <li>Hofbräuhaus</li>
+                            <li>Marienplatz</li>
+                            <li>Nymphenburg Palace</li>
+                            <li>English Garden</li>
+                            <li>Deutsches Museum</li>
+
+                        </ul>
+                    </div>
+
+
+                    <div class="card">
+                        <h2>
+                            Hamburg 
+                        </h2>
+                        <ul>
+                            <li>Miniatur Wunderland</li>
+                            <li>Elbphilharmonie</li>
+                            <li>Speicherstadt</li>
+                            <li>St. Michael's Church</li>
+                            <li>Planten un Blomen</li>
+                        </ul>
+                    </div>
+
+
+                    <div class="card">
+                        <h2>
+                            Cologne
+                        </h2>
+                        <ul> 
+                            <li>Cologne Cathedral</li>
+                            <li>Hohenzollern Bridge</li>
+                            <li>Museum Ludwig</li>
+                            <li>Old Town (Altstadt)</li>
+                            <li>Rhine River Cruises</li>
+                        </ul>
+                    </div>
+
+
+                    <div class="card">
+                        <h2>
+                            Frankfurt
+                        </h2>
+                        <ul>
+                            <li>Römer</li>
+                            <li>Palmengarten</li>
+                            <li>Städel Museum</li>
+                            <li>Main Tower</li>
+                            <li>Goethe House</li>
+                        </ul>
+                    </div>
+
+                </section>
                 
             </main>
             <div id="footer"></div>
-
-        <script>
-            async function loadHTML(id, file){
-                const el = document.getElementById(id);
-                const resp = await fetch(file);
-                el.innerHTML = await resp.text();
-            }
-            loadHTML("header", "header.html");
-            loadHTML("footer", "footer.html");
-        </script>
 
         </body>

@@ -223,3 +223,57 @@ ul {
     height: 30px;
     margin:0px;
 }
+
+
+/*Form styles*/
+
+
+form {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 400px;
+    margin: 20px;
+    padding: 10px;
+    border: var(--border);
+    border-radius: var(--menu-radius);
+    background-color: moccasin;
+}
+
+label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+input {
+    height: 35px;
+    border: var(--border);
+    font-size: 18px;
+}
+
+textarea {
+    height: 140px;
+    border: var(--border);
+    font-size: 18px;
+}
+
+form >button {
+    margin-top: 10px;
+    height: 35px;
+    width: 80px;
+    cursor: pointer;
+}
+
+/*Footer styles*/
+
+
+footer { 
+    border: var(--border);
+    height: 50px;
+    position: relative;
+    background-color: blue;
+}
+
+footer p {
+    padding: 0;
+}
