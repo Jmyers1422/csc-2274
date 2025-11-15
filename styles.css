@@ -108,7 +108,6 @@ nav a {
     width: 100%;
     overflow: hidden;
     position: relative;
-    align-items: center;
     min-width: 100%;
     margin: 0px;
     padding: 0px;
@@ -130,21 +129,25 @@ nav a {
 
 /*Banner Title*/
 .hero .title {
-    width: 100%;
+    width: auto;
     position: absolute;
     background-color: var(--menu-bg);
     color: var(--text-color-menu);
-    border-top: var(--border);
+    border-left: var(--border);
+    border-right: var(--border);
     border-bottom: var(--border);
     text-align: center;
     padding: 0px;
     top: 0%;
+    left:50%;
+    transform: translateX(-50%);
     z-index: 1;
 }
 
 .title h1 {
     font-size: 40px;
     margin: 0px;
+    padding: 5px;
 }
 
 .title p {
@@ -156,16 +159,18 @@ nav a {
 
 
 body {
-    margin:0px;
+    margin:0;
     font-family: Arial, sans-serif;
     background-color: white;
 }
+
 main {
-    clear: left;
     display:flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-content: center;
+    width:60%;
+    margin: auto;
+    box-sizing: border-box;
 }
 
 h2 {
@@ -176,6 +181,9 @@ p {
     font-size: 18px;
     line-height: 1.6;
     margin: 20px;
+    margin-left:0;
+    padding-left: 0;
+    align-self: left;
 }
 
 ul {
@@ -183,21 +191,38 @@ ul {
 }
 
 
+/*about page*/
+
+
+
+.about h3 {
+    align-self: left;
+    margin-top:30px;
+}
+
+.about p {
+    align-self: left;
+}
+
+
+
 /*====================== Cards ======================*/
 
 
 .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    /*grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;*/
+    flex-wrap: wrap;
     margin: 20px;
-    
+    justify-content: center;
 }
 
 .grid >div {
     background-color: var(--menu-bg);
     border: var(--border);
-    height: 500px;
-    width: 400px; 
+    height: 400px;
+    width: 300px; 
     padding: 0px;
     font-size: 30px;
     margin-bottom: 80px;
@@ -209,40 +234,36 @@ ul {
     height: 100%;
     max-width: 80%;
     display: grid;
-   /* grid-template-columns: 350px 1fr .2fr; col1 keeps image small*/
-    padding: 0px; 
-    margin-left: auto;
-    margin-right: auto;
+    padding: 10px; 
+    margin-left: 30px;
+    margin-right: 30px;
     margin-bottom: 20px;
+    box-shadow: 0 15px 30px 1px grey;
 }
 
-.card >.content >h4 {
-    position: relative;
-    top: 10px;
+.card .blur .content p {
+    display: none;
 }
 
-.card >.image {
-    display: flex;
-    overflow: auto; /* stops image from leaving container*/
+.card .blur .button {
+    display: none;
+    
 }
 
-.card >.image >img {
-    min-width:100%;
-    min-height:100%;
-    max-width: 100%; /*gets rid of scroll bar*/
-    padding: 0px;
+.card .blur .button button {
+    width: 40%;
+    height: 10%;
 }
 
-.card >.button {
-    display:flex;
-    align-items: center;
+
+.card:hover {
+    box-shadow: 0 15px 30px 1px black;
 }
 
-.card >.button >button {
-    height: 30px;
-    margin:0px;
+.card:hover .content p, .card:hover .button, .card:hover .blur{
+    display:block;
+    backdrop-filter: blur(5px);
 }
-
 
 /*====================== Contact Form ======================*/
 
@@ -360,3 +381,6 @@ footer p {
     font-family: var(--font-menu);
     justify-content: center;
 }
+
+
+

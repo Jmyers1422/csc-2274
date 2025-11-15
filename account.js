@@ -6,6 +6,8 @@ const accountusername = document.getElementById('username');
 const accountpassword = document.getElementById('password');
 const accountemail = document.getElementById('accemail');
 const form = document.getElementById('create-account');
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+const passwordregex = /^(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$/i;
 
 
 
@@ -20,7 +22,6 @@ function validateUsername() {
 
 
 //email validation
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 function validateEmail() {
     if (emailRegex.test(accountemail.value) != true) {
         //alert('Please enter a valid email (e.g., name@example.com).')
@@ -31,7 +32,6 @@ function validateEmail() {
 
 
 //Password validation
-const passwordregex = /^(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$/i;
 function validatePassword() {
 
     if (passwordregex.test(accountpassword.value) != true){
@@ -55,7 +55,7 @@ form.addEventListener('submit', (e) => {
     if (!okEmail || !okUsername || !okPassword) {
         e.preventDefault();
         if (!okEmail && !okUsername && !okPassword) 
-            {alert('Invalid inputs.')}
+            {alert('Invalid inputs.');}
 
         else if (!okUsername) 
             {alert('Username must contain at least 4 characters.');}
